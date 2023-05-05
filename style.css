@@ -1,0 +1,285 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo img {
+  width: 120px;
+  height: 100px;
+  border-radius: 50% 20% / 10% 50%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+a:not(.btn a) {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+a:hover:not(.btn a) {
+  letter-spacing: 6px;
+
+}
+
+.btn a {
+  background: #8C613Dff;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/*  .btn a:hover {
+  color: #000000;
+  background: #FFFFFF;
+}/*/
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  right: 0;
+  background: #8C613Dff;
+  border-radius :5px;
+  border: #8C613Dff 2px solid;
+
+}
+
+/*-seasalt: #F6F6F6;
+--antiflash-white: #F4F7F9;
+--raw-umber: #8C613D;
+--persian-orange: #C88962;
+--persian-orange-2: #C68A65;*/
+
+input[type="search"] {
+  width: 315px;
+  left: 24px;
+  position: relative;
+  outline: none;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input:focus {
+  /* cor quase universal */
+  border: #0D1A0DD1 2px solid;
+  border-radius: 7px;
+}
+
+main {
+  margin-top: 200px;
+  display: grid;
+  /*Essas linhas de código definem uma grade de layout com três colunas iguais e linhas com altura fixa de 400 pixels. Também adiciona um espaço de 100 pixels entre as linhas e um espaço de 18 pixels entre as colunas, permitindo que os itens dentro da grade fiquem organizados em três colunas com uma altura fixa e espaço entre eles para separá-los. É usado em elementos HTML para criar um design de página.*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  grid-gap: 100px 18px;
+
+}
+
+.grid {
+  border: #A4A4A4 1px solid;
+  text-align: center;
+  border-radius: 10px;
+  color: #000000;
+height: 500px;
+
+ 
+  backdrop-filter: blur(0px); /* aplicando desfoque de 5 pixels PARA O FUNDO MAS NÃO PARA SEUS ELEMENTOS*/
+
+}
+
+
+#icon{
+  padding: 3px 9px;
+  color: #000000;
+  background: #FFFFFF;
+  border:none;
+  left: 28px;
+  border-radius: 2px;
+  position: relative;
+}
+.grid img{
+  width: 290px;
+  top:10px;
+  height: 199px;
+  border-radius :8%;
+  position: relative;
+}
+
+summary{
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: 27px;
+list-style-type: disc;
+}
+h1{
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* DEIXA tudo embaçado quando clicado OS LINKS */
+ul:hover a{
+backdrop-filter: bluer(10px);
+opacity: 0.2;
+}
+ul a:hover{
+  transform: scale(1.5);
+  opacity: 2;
+  color: #FFFFFF;
+  filter: blur(0px);
+}
+a:berofe{
+  position: absolute;
+  height: 100%;
+  content: "";
+  width: 100%;
+  top:0;
+  left:0;
+
+ transition: 0.5;
+ transform: scale(0);
+ z-index: -1;
+}
+a:hover:berofe{
+ transform: scale(1.2); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:640px) {
+  .logo img {
+    width: 0px;
+    height: 0px;
+    border-radius: 12px;
+    left: 0;
+    right: 0;
+    top: 39px;
+    position: absolute;
+  }
+
+  .navbar {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    display: block;
+  }
+
+  a:not(.btn a) {
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 9px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    right: 1px;
+    transition: 0.3s;
+  }
+
+  a:hover:not(.btn a) {
+
+    letter-spacing: 4px;
+
+  }
+
+  .btn a {
+
+    padding: 5px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-size: 14px;
+    right: 10px;
+    top: 100px;
+
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  body {
+    background: white;
+
+  }
+
+  input[type="search"] {
+    width: 280px;
+    left: 28px; 
+
+    position: relative;
+    outline: none;
+
+
+  }
+  main {
+    margin-top: 230px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 10px 12px;
+
+  }
+#icon{
+  padding: 3px 9px;
+  border:none;
+  left: 28px;
+  border-radius: 2px;
+  position: relative;
+}
+.grid img{
+  width: 330px;
+  top:8px;
+  height: 300px;
+  border-radius :8%;
+  position: relative;
+}
+
+.grid{
+  backdrop-filter: blur(5px); /* aplicando desfoque de 5 pixels PARA O FUNDO MAS NÃO PARA SEUS ELEMENTOS*/
+}
+
+
+}
